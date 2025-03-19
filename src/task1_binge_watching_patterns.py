@@ -63,12 +63,11 @@ def main():
 
     input_file = "/workspaces/handson-7-spark-structured-api-movie-ratings-analysis-schava4/input/movie_ratings_data.csv"
     output_file = "/workspaces/handson-7-spark-structured-api-movie-ratings-analysis-schava4/Outputs/binge_watching_patterns.csv"
-
     df = load_data(spark, input_file)
     result_df = detect_binge_watching_patterns(df)  # Call function here
     write_output(result_df, output_file)
 
     spark.stop()
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     main()
